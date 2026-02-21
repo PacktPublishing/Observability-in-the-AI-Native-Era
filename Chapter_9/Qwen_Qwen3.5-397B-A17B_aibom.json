@@ -1,0 +1,205 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "authors": [
+        {
+          "name": "Qwen"
+        }
+      ],
+      "bom-ref": "pkg:huggingface/Qwen/Qwen3.5-397B-A17B@1.0",
+      "copyright": "NOASSERTION",
+      "description": "No description available",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
+        }
+      ],
+      "group": "Qwen",
+      "licenses": [
+        {
+          "license": {
+            "id": "apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0"
+          }
+        }
+      ],
+      "manufacturer": {
+        "name": "Qwen",
+        "url": [
+          "https://huggingface.co/Qwen"
+        ]
+      },
+      "modelCard": {
+        "modelParameters": {
+          "architectureFamily": "transformer",
+          "inputs": [
+            {
+              "format": "text"
+            }
+          ],
+          "modelArchitecture": "Qwen3.5-397B-A17BForCausalLM",
+          "outputs": [
+            {
+              "format": "generated-text"
+            }
+          ],
+          "task": "text-generation"
+        },
+        "properties": [
+          {
+            "name": "bomFormat",
+            "value": "CycloneDX"
+          },
+          {
+            "name": "specVersion",
+            "value": "1.6"
+          },
+          {
+            "name": "serialNumber",
+            "value": "urn:uuid:Qwen-Qwen3.5-397B-A17B"
+          },
+          {
+            "name": "version",
+            "value": "1.0.0"
+          },
+          {
+            "name": "primaryPurpose",
+            "value": "image-text-to-text"
+          },
+          {
+            "name": "suppliedBy",
+            "value": "Qwen"
+          },
+          {
+            "name": "licenses",
+            "value": "apache-2.0"
+          },
+          {
+            "name": "typeOfModel",
+            "value": "qwen3_5_moe"
+          },
+          {
+            "name": "downloadLocation",
+            "value": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/tree/main"
+          },
+          {
+            "name": "external_references",
+            "value": "[{\"type\": \"website\", \"url\": \"https://huggingface.co/Qwen/Qwen3.5-397B-A17B\", \"comment\": \"Model repository\"}, {\"type\": \"distribution\", \"url\": \"https://huggingface.co/Qwen/Qwen3.5-397B-A17B/tree/main\", \"comment\": \"Model files\"}]"
+          }
+        ],
+        "quantitativeAnalysis": {
+          "graphics": {}
+        }
+      },
+      "name": "Qwen3.5-397B-A17B",
+      "publisher": "Qwen",
+      "purl": "pkg:huggingface/Qwen/Qwen3.5-397B-A17B@1.0",
+      "supplier": {
+        "name": "Qwen",
+        "url": [
+          "https://huggingface.co/Qwen"
+        ]
+      },
+      "type": "machine-learning-model",
+      "version": "1.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "pkg:huggingface/Qwen/Qwen3.5-397B-A17B@1.0"
+      ],
+      "ref": "pkg:generic/Qwen%2FQwen3.5-397B-A17B@1.0"
+    }
+  ],
+  "externalReferences": [
+    {
+      "type": "distribution",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "pkg:generic/Qwen%2FQwen3.5-397B-A17B@1.0",
+      "copyright": "NOASSERTION",
+      "description": "No description available",
+      "name": "Qwen3.5-397B-A17B",
+      "purl": "pkg:generic/Qwen%2FQwen3.5-397B-A17B@1.0",
+      "type": "application",
+      "version": "1.0"
+    },
+    "properties": [
+      {
+        "name": "primaryPurpose",
+        "value": "image-text-to-text"
+      },
+      {
+        "name": "suppliedBy",
+        "value": "Qwen"
+      },
+      {
+        "name": "typeOfModel",
+        "value": "qwen3_5_moe"
+      },
+      {
+        "name": "bomFormat",
+        "value": "CycloneDX"
+      },
+      {
+        "name": "specVersion",
+        "value": "1.6"
+      },
+      {
+        "name": "serialNumber",
+        "value": "urn:uuid:Qwen-Qwen3.5-397B-A17B"
+      },
+      {
+        "name": "version",
+        "value": "1.0.0"
+      },
+      {
+        "name": "primaryPurpose",
+        "value": "image-text-to-text"
+      },
+      {
+        "name": "suppliedBy",
+        "value": "Qwen"
+      },
+      {
+        "name": "licenses",
+        "value": "apache-2.0"
+      },
+      {
+        "name": "typeOfModel",
+        "value": "qwen3_5_moe"
+      },
+      {
+        "name": "downloadLocation",
+        "value": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/tree/main"
+      },
+      {
+        "name": "external_references",
+        "value": "[{\"type\": \"website\", \"url\": \"https://huggingface.co/Qwen/Qwen3.5-397B-A17B\", \"comment\": \"Model repository\"}, {\"type\": \"distribution\", \"url\": \"https://huggingface.co/Qwen/Qwen3.5-397B-A17B/tree/main\", \"comment\": \"Model files\"}]"
+      }
+    ],
+    "timestamp": "2026-02-21T23:29:56.122594Z",
+    "tools": {
+      "components": [
+        {
+          "bom-ref": "pkg:generic/owasp-genai/owasp-aibom-generator@1.0.0",
+          "manufacturer": {
+            "name": "OWASP GenAI Security Project"
+          },
+          "name": "OWASP AIBOM Generator",
+          "type": "application",
+          "version": "1.0.0"
+        }
+      ]
+    }
+  },
+  "serialNumber": "urn:uuid:af19e8d5-b501-43cd-aa5f-4aee06753f1d",
+  "specVersion": "1.6",
+  "version": 1
+}
