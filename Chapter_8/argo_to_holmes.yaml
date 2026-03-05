@@ -1,38 +1,75 @@
-apiVersion: v1
-  kind: ConfigMap
-  metadata:
-    name: argocd-notifications-cm
-    namespace: argocd
-  data:
-    trigger.on-rollout-degraded: |
-      - description: Application rollout has degraded
-        send:
-          - app-rollout-failed
-        when: app.status.operationState.phase in ['Error', 'Failed'] or app.status.health.status == 'Degraded'
-        oncePer: app.status.operationState.syncResult.revision
-    trigger.on-sync-failed: |
-      - description: Application sync has failed
-        send:
-          - app-rollout-failed
-        when: app.status.operationState.phase in ['Error', 'Failed']
-        oncePer: app.status.operationState.syncResult.revision
-      webhook:
-        app-rollout-failed:
-          method: POST
-          url http://<HOLMES-URL>/api/investigate
-          headers:
-            Content-Type: application/json
-          body: |
-            {
-              "event": "rollout_failed",
-              "application": "{{.app.name}}",
-              "project": "{{.app.spec.project}}",
-              "cluster": "{{.app.spec.destination.server}}",
-              "namespace": "{{.app.spec.destination.namespace}}",
-              "phase": "{{.app.status.operationState.phase}}",
-              "health": "{{.app.status.health.status}}",
-              "message": "{{.app.status.operationState.message}}",
-              "revision": "{{.app.status.operationState.syncResult.revision}}",
-              "timestamp": "{{.app.status.operationState.finishedAt}}",
-              "url": "{{.context.argocdUrl}}/applications/{{.app.name}}"
-            }
+apiVersion: v1 
+
+ kind: ConfigMap 
+
+ metadata: 
+
+   name: argocd-notifications-cm 
+
+   namespace: argocd 
+
+ data: 
+
+   trigger.on-rollout-degraded: | 
+
+     - description: Application rollout has degraded 
+
+       send: 
+
+         - app-rollout-failed 
+
+       when: app.status.operationState.phase in ['Error', 'Failed'] or app.status.health.status == 'Degraded' 
+
+       oncePer: app.status.operationState.syncResult.revision 
+
+   trigger.on-sync-failed: | 
+
+     - description: Application sync has failed 
+
+       send: 
+
+         - app-rollout-failed 
+
+       when: app.status.operationState.phase in ['Error', 'Failed'] 
+
+       oncePer: app.status.operationState.syncResult.revision 
+
+     webhook: 
+
+       app-rollout-failed: 
+
+         method: POST 
+
+         path: "http://<HOLMES-URL>/api/investigate" 
+
+         headers: 
+
+           Content-Type: application/json 
+
+         body: | 
+
+           { 
+
+             "event": "rollout_failed", 
+
+             "application": "{{.app.name}}", 
+
+             "project": "{{.app.spec.project}}", 
+
+             "cluster": "{{.app.spec.destination.server}}", 
+
+             "namespace": "{{.app.spec.destination.namespace}}", 
+
+             "phase": "{{.app.status.operationState.phase}}", 
+
+             "health": "{{.app.status.health.status}}", 
+
+             "message": "{{.app.status.operationState.message}}", 
+
+             "revision": "{{.app.status.operationState.syncResult.revision}}", 
+
+             "timestamp": "{{.app.status.operationState.finishedAt}}", 
+
+             "url": "{{.context.argocdUrl}}/applications/{{.app.name}}" 
+
+           }
