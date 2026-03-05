@@ -1,0 +1,8 @@
+The word "strawberry" contains three instances of the letter "r" (case-insensitive count). The positions are:
+
+- The third letter: "r"
+- The eighth letter: "r"
+- The ninth letter: "r"
+
+If case sensitivity is considered (e.g., counting only uppercase "R"), the word "strawberry" has no uppercase letters, so the count would be zero. 
+However, in most contexts, such questions are case-insensitive, so the intended answer is 3.
