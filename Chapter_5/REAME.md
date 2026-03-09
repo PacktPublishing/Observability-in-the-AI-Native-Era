@@ -11,7 +11,7 @@ Create a directory we used virtual_env for our example.
 
 On Windows/macoS/Linux:
 ```sh
-python -m venv virtual_env/
+python3 -m venv virtual_env/
 ```
 
 To activate the virtual environment, open your terminal and run:
