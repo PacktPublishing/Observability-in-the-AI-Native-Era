@@ -2,6 +2,8 @@
 
 This repo contains a GitHub Actions workflow that uses the `ai-action/ollama-action` to run an agent which can suggest commands to run against this repository. For demo purposes the agent will return dummy upgrade commands defined in `agent-config.json` or in its generated response.
 
+Note: Code was AI generated and may contain msitakes. This was mostly working, but is for demonstrative purposes.
+
 Usage:
 
 - Trigger the workflow via `Actions -> Ollama Agent Runner -> Run workflow` (workflow_dispatch), or send a `repository_dispatch` event.
@@ -94,7 +96,5 @@ Quick notes on safety, PR flow, and CI
 ```bash
 python3 -m unittest discover -v tests
 ```
-
-If you'd like, I can open a PR from the enhancement branch with all changes, or continue iterating here on `main`.
 
 
