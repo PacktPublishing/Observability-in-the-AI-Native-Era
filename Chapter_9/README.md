@@ -23,7 +23,7 @@ Create a directory we used virtual_env for our example.
 
 On Windows/macoS/Linux:
 ```sh
-python -m venv virtual_env/
+python3 -m venv virtual_env/
 ```
 
 To activate the virtual environment, open your terminal and run:
@@ -37,7 +37,7 @@ To activate the virtual environment, open your terminal and run:
   ```
 Where Folder is the location of the python environment. 
 
-### Step 2: Install Dependencie
+### Step 2: Install Dependencies
 
 Requires Ollama running and the tinyllama SLM pulled.
 
