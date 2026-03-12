@@ -2,7 +2,7 @@
 
 This repo contains a GitHub Actions workflow that uses the `ai-action/ollama-action` to run an agent which can suggest commands to run against this repository. For demo purposes the agent will return dummy upgrade commands defined in `agent-config.json` or in its generated response.
 
-Note: Code was AI generated and may contain msitakes. This was mostly working, but is for demonstrative purposes.
+Note: Code was AI generated and may contain mistakes. This was mostly working, but is for demonstrative purposes.
 
 Usage:
 
