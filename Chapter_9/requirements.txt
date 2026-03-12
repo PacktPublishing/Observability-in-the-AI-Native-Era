@@ -1,2 +1,1 @@
-deepeval
-llama
+-U deepeval
