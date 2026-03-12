@@ -1,6 +1,7 @@
 # Chapter 9 SLM Judging LLM Example
 
 ## Pre Requisites:
+The hardware requirements are somewhat significant. Check your system capabilities.
 
 You should have already installed ollama at v0.5.0+ and have it capable of running tinyllama. You can do this in a virtual environment, or not depending on preference. 
 
@@ -55,3 +56,6 @@ See [the docs](https://docs.pytest.org/en/stable/how-to/cache.html) for more inf
 ### Step 3 Run the test
 DeepEval is a CLI. You'll notice there's no main function in our script. To run the script use 
 ``` deepeval test run test_deepeval1.py```
+
+### Troubleshooting
+If the tests are timing out, try a slightly larger model like gemma3:4b which runs well on CPU, this was also tested and validated.
